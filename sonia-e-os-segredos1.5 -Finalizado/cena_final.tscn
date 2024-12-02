@@ -1,0 +1,155 @@
+[gd_scene load_steps=10 format=3 uid="uid://ct2gs7wk370am"]
+
+[ext_resource type="Texture2D" uid="uid://hax2x5fmj0yt" path="res://assets/foto/imagensCenas/Batalha (1).jpg" id="2_pj50y"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_o4bxn"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_n86vv"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_ts4et"]
+
+[sub_resource type="GDScript" id="GDScript_mq6qw"]
+script/source = "extends Node2D
+
+# Configurações
+@export var _step: float = 0.05  # Intervalo entre cada caractere na animação
+@export var _dialog: RichTextLabel = null  # Referência ao RichTextLabel
+
+# Nó de áudio para som de digitação
+@onready var audio_player = $CanvasLayer/Control/Texto/Digitacao
+
+func _ready() -> void:
+	# Inicializa o RichTextLabel e anima o texto com som
+	MusicMenager.music_player2.stop()
+	_dialog = $CanvasLayer/Control/Texto/texto  # Certifique-se de ajustar o caminho
+	_initialize_dialog()
+	#animar_texto_com_audio(_dialog, _dialog.text, _step)  # Chama a animação do texto
+	init_cine()
+
+func init_cine() -> void:
+	call_deferred(\"mudar_para_cena_inicial\")	
+
+func _on_button_pressed() -> void:
+	print(\"Botão pressionado. Iniciando troca de cena...\")
+	call_deferred(\"_mudar_para_mapa_principal\")
+	
+func _mudar_para_mapa_principal() -> void:
+	var scene_path = \"res://cena_final_2.tscn\"
+	if not FileAccess.file_exists(scene_path):
+		print(\"Erro: Cena não encontrada no caminho:\", scene_path)
+		return
+	get_tree().change_scene_to_file(scene_path)
+	print(\"Cena trocada para MapaPrincipal!\")
+
+# Função para animar o texto com som
+func animar_texto_com_audio(label: RichTextLabel, texto: String, intervalo: float) -> void:
+	label.visible_characters = 0  # Inicia sem texto visível
+	for i in range(texto.length()):
+		await get_tree().create_timer(intervalo).timeout  # Aguarda o intervalo definido
+		label.visible_characters += 1  # Mostra mais um caractere
+
+		# Reproduz o som de digitação
+		if not audio_player.playing:  # Evita sobreposição de sons
+			audio_player.play()
+
+	# Opcional: Para o som ao final da digitação
+	audio_player.stop()
+
+func _initialize_dialog() -> void:
+	if not _dialog:
+		print(\"Erro: RichTextLabel não atribuído!\")
+		return
+
+	_dialog.visible_characters = 0  # Inicializa com texto oculto
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jww"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1ce5"]
+texture = ExtResource("5_n86vv")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_en3n2"]
+texture = ExtResource("5_n86vv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_se074"]
+texture = ExtResource("5_n86vv")
+
+[node name="CenaFinal" type="Node2D"]
+script = SubResource("GDScript_mq6qw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 56.0
+offset_right = -65.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pj50y")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = 29.0
+offset_right = 2.0
+offset_bottom = 108.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o4bxn")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_b0jww")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f1ce5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_en3n2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_se074")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_ts4et")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

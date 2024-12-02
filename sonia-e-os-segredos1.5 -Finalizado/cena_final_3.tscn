@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdkf8dwqysowk"]
+
+[ext_resource type="Script" path="res://cena_final_3.gd" id="1_0ng0y"]
+[ext_resource type="Texture2D" uid="uid://dofviwdvxhd4o" path="res://assets/foto/imagensCenas/cassiquefinal (1).jpg" id="2_axvad"]
+[ext_resource type="Texture2D" uid="uid://d1gdctjv45hrp" path="res://assets/foto/imagensCenas/file.png" id="3_w74b0"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_lb8qv"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_v2i5m"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_1q3q6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv664"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ka0hm"]
+texture = ExtResource("5_v2i5m")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5ayf"]
+texture = ExtResource("5_v2i5m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1fh7v"]
+texture = ExtResource("5_v2i5m")
+
+[node name="CenaFinal3" type="Node2D"]
+script = ExtResource("1_0ng0y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_axvad")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_w74b0")
+
+[node name="texto" type="RichTextLabel" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 124.0
+offset_right = -76.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_lb8qv")
+theme_override_font_sizes/normal_font_size = 25
+text = "Após derrotarem a cuca , todo o povo da aldeia organizou uma grande festa para celebrar a vitória de Sonia kaluanã . Foi uma noite maravilhosa , carregada de afeto e esperança."
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = 9.0
+offset_right = 3.0
+offset_bottom = 88.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_lb8qv")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_cv664")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ka0hm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m5ayf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1fh7v")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_1q3q6")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

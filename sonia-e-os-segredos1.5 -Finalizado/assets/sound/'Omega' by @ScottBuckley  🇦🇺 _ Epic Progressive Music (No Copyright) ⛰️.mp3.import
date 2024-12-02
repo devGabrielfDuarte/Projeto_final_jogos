@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgx0vpbbj3ph0"
+path="res://.godot/imported/'Omega' by @ScottBuckley  🇦🇺 _ Epic Progressive Music (No Copyright) ⛰️.mp3-d65de41afb8fc8a1258aa8fd66d944b8.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/'Omega' by @ScottBuckley  🇦🇺 _ Epic Progressive Music (No Copyright) ⛰️.mp3"
+dest_files=["res://.godot/imported/'Omega' by @ScottBuckley  🇦🇺 _ Epic Progressive Music (No Copyright) ⛰️.mp3-d65de41afb8fc8a1258aa8fd66d944b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

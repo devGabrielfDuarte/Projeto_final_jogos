@@ -1,0 +1,145 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1dyghfbj6xma"]
+
+[ext_resource type="Script" path="res://dialog_gema_3.gd" id="1_jewdd"]
+[ext_resource type="Texture2D" uid="uid://2ku1w8uk8lh" path="res://assets/foto/imagensSprites/fogogema.jpg" id="2_7o4hw"]
+[ext_resource type="Texture2D" uid="uid://euxxmnjg2mdl" path="res://assets/foto/imagensSprites/file (1) (3).png" id="3_g1aj2"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_2aorv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5edxl"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t87m2"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 27
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5c24"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 16
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb328"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 27
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="dialog_gema3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jewdd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -212.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_7o4hw")
+
+[node name="photo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -302.0
+offset_right = 207.0
+offset_bottom = -109.0
+grow_vertical = 0
+texture = ExtResource("3_g1aj2")
+
+[node name="color_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 206.0
+offset_top = -169.0
+offset_right = -128.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.73, 0.27375, 0.1825, 0.627451)
+
+[node name="Pista" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -359.0
+offset_top = -161.0
+offset_right = 437.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/normal_font = ExtResource("4_2aorv")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "Parabens, voce encontrou a gema elementar do fogo
+
+"
+scroll_following = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -169.0
+offset_right = -28.0
+offset_bottom = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 20
+theme_override_fonts/font = ExtResource("4_2aorv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_5edxl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t87m2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5c24")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bb328")
+text = "OK"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

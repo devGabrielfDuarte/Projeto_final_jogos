@@ -1,0 +1,435 @@
+[gd_scene load_steps=28 format=3 uid="uid://c3e62luhg0fee"]
+
+[ext_resource type="Script" path="res://Scripts/MapaPrincipal.gd" id="1_76e5n"]
+[ext_resource type="Texture2D" uid="uid://biaw8mhfkn2eh" path="res://assets/foto/imagensCenas/download (3).jpeg" id="2_74ii2"]
+[ext_resource type="Texture2D" uid="uid://wplnpd8rhs3v" path="res://assets/foto/imagensCenas/resized_image_195x399 (1).png" id="2_d0g1l"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="3_h1uxb"]
+[ext_resource type="StyleBox" uid="uid://ds6bt2hyukkea" path="res://assets/styles/botao_apertado2.tres" id="4_5gs1p"]
+[ext_resource type="Texture2D" uid="uid://tphpcmsw6n8l" path="res://assets/foto/imagensDialog/Pixel_art_map_resized_board.png" id="4_5ofyc"]
+[ext_resource type="StyleBox" uid="uid://bqucu1c78ghh7" path="res://assets/styles/botao_norma2.tres" id="5_clh8j"]
+[ext_resource type="StyleBox" uid="uid://dt6x18w8b2s3u" path="res://assets/styles/botao_apertado.tres" id="5_ggqgb"]
+[ext_resource type="StyleBox" uid="uid://cwuo356qhildd" path="res://assets/styles/botao_normal3.tres" id="6_t3b8v"]
+[ext_resource type="StyleBox" uid="uid://cqutjd6btykjf" path="res://assets/styles/botao_normal4.tres" id="6_u0hqy"]
+[ext_resource type="StyleBox" uid="uid://dwsr5q1kh7fye" path="res://assets/styles/botao_normal5.tres" id="8_qhh5d"]
+[ext_resource type="StyleBox" uid="uid://4u8xf0pht6p0" path="res://assets/styles/botao_normal6.tres" id="10_sj51u"]
+[ext_resource type="StyleBox" uid="uid://cxg3mgq3q7ulk" path="res://assets/styles/botãoCuca.tres" id="10_xebuq"]
+[ext_resource type="StyleBox" uid="uid://x6umcsxh7sab" path="res://assets/styles/botãoCuca2.tres" id="11_ey3r5"]
+[ext_resource type="Texture2D" uid="uid://7ujkkop6lhu4" path="res://assets/foto/imagensCenas/transparent_sign.png" id="12_ueyf0"]
+[ext_resource type="Texture2D" uid="uid://vsfgb7n10pxy" path="res://assets/foto/imagensSprites/file (1) (2).png" id="13_mepoi"]
+[ext_resource type="Texture2D" uid="uid://cn51cgyetxuku" path="res://assets/foto/imagensSprites/file (1) (1).png" id="14_4wv1d"]
+[ext_resource type="Texture2D" uid="uid://euxxmnjg2mdl" path="res://assets/foto/imagensSprites/file (1) (3).png" id="16_yho14"]
+[ext_resource type="Texture2D" uid="uid://bdjclxhbd5m2c" path="res://assets/foto/imagensSprites/file (1) (4).png" id="17_bir66"]
+[ext_resource type="Texture2D" uid="uid://crnt4ibq5k2aa" path="res://assets/foto/imagensSprites/file (1) (5).png" id="18_v6fya"]
+[ext_resource type="AudioStream" uid="uid://dnq5v8id0t5yb" path="res://assets/sound/I Wonder Whats For Dinner - Lydia's Lullaby (1).mp3" id="19_pte2b"]
+[ext_resource type="AudioStream" uid="uid://dp5cmdip6kodx" path="res://extensao/assets/audio/correct-6033.wav" id="22_grfry"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh45g"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7xyr"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adbbq"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3lgr"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcdk1"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="MapaPrincipal" type="Node2D"]
+position = Vector2(4, 18)
+script = ExtResource("1_76e5n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_74ii2")
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/ColorRect"]
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 139.0
+offset_right = 256.0
+offset_bottom = 490.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0338533, 0.0338533, 0.0338533, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/ColorRect/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = -13.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d0g1l")
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 59.0
+offset_right = 213.0
+offset_bottom = 304.0
+color = Color(0.03, 0.03, 0.03, 0.705882)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 95.0
+offset_right = 43.0
+offset_bottom = 122.0
+color = Color(0.188235, 0.305882, 0.109804, 0.996078)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 252.0
+offset_right = 43.0
+offset_bottom = 279.0
+color = Color(0.380392, 0.254902, 0.101961, 0.988235)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 212.0
+offset_right = 43.0
+offset_bottom = 239.0
+color = Color(0.266667, 0.654902, 0.94902, 0.972549)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 171.0
+offset_right = 43.0
+offset_bottom = 198.0
+color = Color(0.635294, 0.243137, 0.901961, 0.972549)
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 132.0
+offset_right = 43.0
+offset_bottom = 159.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 99.0
+offset_right = 209.0
+offset_bottom = 122.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_h1uxb")
+text = "Floresta Amazonica
+"
+
+[node name="Label6" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 14.0
+offset_right = 213.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_h1uxb")
+text = "Guia do mapa
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 142.0
+offset_right = 220.0
+offset_bottom = 166.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 12
+text = "Montanha da mantiqueira"
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 179.0
+offset_right = 187.0
+offset_bottom = 202.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_h1uxb")
+text = "vila dos caiporas
+"
+
+[node name="Label4" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 216.0
+offset_right = 195.0
+offset_bottom = 239.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_h1uxb")
+text = "Cachoeira da iara"
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control/ColorRect/Control/TextureRect"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 254.0
+offset_right = 181.0
+offset_bottom = 277.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("3_h1uxb")
+text = "Pantanal
+"
+
+[node name="Mapa" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(671, 316.5)
+scale = Vector2(0.697917, 0.544753)
+texture = ExtResource("4_5ofyc")
+
+[node name="Floresta" type="Button" parent="CanvasLayer/Control/Mapa"]
+offset_left = -457.074
+offset_top = -138.316
+offset_right = -416.074
+offset_bottom = -75.3157
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_oh45g")
+theme_override_styles/hover = ExtResource("5_clh8j")
+theme_override_styles/pressed = ExtResource("4_5gs1p")
+theme_override_styles/normal = ExtResource("5_clh8j")
+
+[node name="Vila" type="Button" parent="CanvasLayer/Control/Mapa"]
+offset_left = 281.0
+offset_top = -169.0
+offset_right = 321.0
+offset_bottom = -106.0
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_q7xyr")
+theme_override_styles/hover = ExtResource("6_u0hqy")
+theme_override_styles/pressed = ExtResource("5_ggqgb")
+theme_override_styles/normal = ExtResource("6_u0hqy")
+
+[node name="BotaoEspecial" type="Button" parent="CanvasLayer/Control/Mapa"]
+offset_left = 7.0
+offset_top = 177.0
+offset_right = 47.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_q7xyr")
+theme_override_styles/hover = ExtResource("10_xebuq")
+theme_override_styles/pressed = ExtResource("11_ey3r5")
+theme_override_styles/normal = ExtResource("10_xebuq")
+
+[node name="Pantanal" type="Button" parent="CanvasLayer/Control/Mapa"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = 49.0
+offset_right = -1062.0
+offset_bottom = -536.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxFlat_adbbq")
+theme_override_styles/hover = ExtResource("8_qhh5d")
+theme_override_styles/pressed = ExtResource("5_ggqgb")
+theme_override_styles/normal = ExtResource("8_qhh5d")
+text = "
+
+"
+
+[node name="Montanha" type="Button" parent="CanvasLayer/Control/Mapa"]
+offset_left = -104.597
+offset_top = -125.053
+offset_right = -63.597
+offset_bottom = -62.0526
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxFlat_p3lgr")
+theme_override_styles/hover = ExtResource("6_t3b8v")
+theme_override_styles/pressed = ExtResource("5_ggqgb")
+theme_override_styles/normal = ExtResource("6_t3b8v")
+
+[node name="Cachoeira" type="Button" parent="CanvasLayer/Control/Mapa"]
+offset_left = -393.0
+offset_top = 123.0
+offset_right = -351.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxFlat_lcdk1")
+theme_override_styles/hover = ExtResource("10_sj51u")
+theme_override_styles/pressed = ExtResource("5_ggqgb")
+theme_override_styles/normal = ExtResource("10_sj51u")
+
+[node name="TempoLabel" type="Label" parent="CanvasLayer/Control/Mapa"]
+offset_left = 327.0
+offset_top = -497.0
+offset_right = 651.0
+offset_bottom = -423.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 35
+
+[node name="ProgressoLabel" type="Label" parent="CanvasLayer/Control/Mapa"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 331.0
+offset_top = -572.0
+offset_right = -494.0
+offset_bottom = -1148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 35
+
+[node name="TextoTimer" type="Timer" parent="CanvasLayer/Control"]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="TituloControl" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -579.0
+offset_top = 4.0
+offset_right = 577.0
+offset_bottom = 123.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/TituloControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 266.0
+offset_top = -82.0
+offset_right = -242.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_ueyf0")
+
+[node name="TempoLabel" type="Label" parent="CanvasLayer/Control/TituloControl/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 119.0
+offset_top = 125.0
+offset_right = -124.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_h1uxb")
+theme_override_font_sizes/font_size = 35
+text = "Sonia e os segredos da floresta"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="gemas" type="Sprite2D" parent="CanvasLayer/Control/TituloControl"]
+position = Vector2(1113, 103)
+scale = Vector2(0.248239, 0.199796)
+texture = ExtResource("14_4wv1d")
+
+[node name="gemas2" type="Sprite2D" parent="CanvasLayer/Control/TituloControl"]
+position = Vector2(1062, 103)
+scale = Vector2(0.248239, 0.199796)
+texture = ExtResource("13_mepoi")
+
+[node name="gemas3" type="Sprite2D" parent="CanvasLayer/Control/TituloControl"]
+position = Vector2(1012, 103)
+scale = Vector2(0.248239, 0.199796)
+texture = ExtResource("16_yho14")
+
+[node name="gemas4" type="Sprite2D" parent="CanvasLayer/Control/TituloControl"]
+position = Vector2(955.5, 105)
+scale = Vector2(0.374999, 0.199796)
+texture = ExtResource("17_bir66")
+
+[node name="gemas5" type="Sprite2D" parent="CanvasLayer/Control/TituloControl"]
+position = Vector2(910, 104)
+scale = Vector2(0.248239, 0.199796)
+texture = ExtResource("18_v6fya")
+
+[node name="Audio" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("19_pte2b")
+volume_db = 2.0
+
+[node name="AudioCorrect" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("22_grfry")
+
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Floresta" to="." method="_on_floresta_amazonica_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Floresta" to="." method="_on_floresta_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Vila" to="." method="_on_vila_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/BotaoEspecial" to="." method="_on_vila_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/BotaoEspecial" to="." method="_on_botao_especial_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Pantanal" to="." method="_on_pantanal_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Montanha" to="." method="_on_montanha_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Mapa/Cachoeira" to="." method="_on_cachoeira_pressed"]
+[connection signal="timeout" from="CanvasLayer/Control/TextoTimer" to="." method="_on_Timer_digitar_timeout"]

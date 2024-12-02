@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://ctq7crkivjw73"]
+
+[ext_resource type="Script" path="res://cena_inicial_9.gd" id="1_fbwg0"]
+[ext_resource type="Texture2D" uid="uid://dxaa16kyt3hqg" path="res://assets/foto/imagensCenas/soniajornada (1).jpg" id="2_btb45"]
+[ext_resource type="Texture2D" uid="uid://cxtw1vh7iri87" path="res://assets/foto/imagensCenas/file (2) (1).png" id="3_2sep8"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_awgei"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_w0vlk"]
+[ext_resource type="AudioStream" uid="uid://ddnaxovs21tc5" path="res://assets/sound/menu.mp3" id="6_2822f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j70vo"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xiylf"]
+texture = ExtResource("5_w0vlk")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hkpq"]
+texture = ExtResource("5_w0vlk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0utf5"]
+texture = ExtResource("5_w0vlk")
+
+[node name="CenaInicial9" type="Node2D"]
+script = ExtResource("1_fbwg0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_btb45")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -165.0
+offset_top = 51.0
+offset_right = 172.0
+offset_bottom = 224.0
+grow_horizontal = 2
+texture = ExtResource("3_2sep8")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -203.0
+offset_right = -71.0
+offset_bottom = -110.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_awgei")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_j70vo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xiylf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2hkpq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0utf5")
+text = "Jogar
+"
+
+[node name="Audio" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("6_2822f")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

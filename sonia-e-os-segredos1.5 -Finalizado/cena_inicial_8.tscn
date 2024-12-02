@@ -1,0 +1,178 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1ibtyyoq2soy"]
+
+[ext_resource type="Script" path="res://cena_inicial_8.gd" id="1_fbwg0"]
+[ext_resource type="Texture2D" uid="uid://dmcepfnq64itn" path="res://assets/foto/imagensCenas/cassique_optimized (1).png" id="2_dqc35"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_vl27r"]
+[ext_resource type="Texture2D" uid="uid://ckr5cgkggvpvg" path="res://assets/foto/imagensDialog/chief_pixel_art_resized_110x185.png" id="5_i56pc"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="5_r2i7w"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="6_gwb5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8iu8"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71dvn"]
+texture = ExtResource("6_gwb5g")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8ft4"]
+texture = ExtResource("6_gwb5g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqcpt"]
+texture = ExtResource("6_gwb5g")
+
+[node name="CenaInicial8" type="Node2D"]
+script = ExtResource("1_fbwg0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dqc35")
+
+[node name="Control" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/Control"]
+layout_mode = 0
+offset_top = 597.0
+offset_right = 1025.0
+offset_bottom = 794.0
+color = Color(0.03, 0.03, 0.03, 0.784314)
+
+[node name="photo" type="TextureRect" parent="CanvasLayer/Control/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -303.0
+offset_right = 172.0
+offset_bottom = -118.0
+grow_vertical = 0
+texture = ExtResource("5_i56pc")
+
+[node name="color_rect" type="ColorRect" parent="CanvasLayer/Control/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 203.0
+offset_top = -170.0
+offset_right = -240.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.114927, 0.195553, 0.0591721, 0.627451)
+
+[node name="nome" type="Label" parent="CanvasLayer/Control/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023
+anchor_top = 0.835
+anchor_right = 0.164
+anchor_bottom = 0.964
+offset_left = -7.496
+offset_top = 3.0
+offset_right = -6.87601
+offset_bottom = 3.14801
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("4_vl27r")
+theme_override_font_sizes/font_size = 30
+text = "Cassique Kaluana"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Pista" type="RichTextLabel" parent="CanvasLayer/Control/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -361.0
+offset_top = -162.0
+offset_right = 304.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/normal_font = ExtResource("4_vl27r")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "Sonia, minha filha, você é a única que pode salvar Tainá. Para derrotar a Cuca, você precisará encontrar as Gemas Elementares. Cada uma está protegida por um guardião ou armadilha, mas juntas, elas te darão força para vencer. Lembre-se, o mapa te guiará, mas escolhas erradas custarão tempo, e isso é algo que não temos. A Lua de Sangue se aproxima, e o destino do mundo está em suas mãos."
+scroll_following = true
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Control"]
+stream = ExtResource("5_r2i7w")
+volume_db = 2.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -215.0
+offset_top = -170.0
+offset_right = -68.0
+offset_bottom = -84.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_vl27r")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_s8iu8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_71dvn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o8ft4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wqcpt")
+text = "Pular
+"
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

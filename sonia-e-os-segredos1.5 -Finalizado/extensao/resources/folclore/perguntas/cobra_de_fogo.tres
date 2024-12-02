@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://bpbs65tqaxt7l"]
+
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_12o1u"]
+[ext_resource type="Texture2D" uid="uid://bhxgo4xq65n51" path="res://extensao/resources/folclore/fotor-2024120122289.jpg" id="1_h6ldq"]
+
+[resource]
+script = ExtResource("1_12o1u")
+question_info = "Qual entidade folclórica é uma cobra de fogo?"
+type = 1
+question_image = ExtResource("1_h6ldq")
+options = Array[String](["Basilisco", "Hydra", "Boitatá", "Cobra de fogo"])
+correct = "Boitatá"

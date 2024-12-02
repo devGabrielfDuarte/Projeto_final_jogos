@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://dd21243mtjxts"]
+
+[ext_resource type="Script" path="res://Scripts/cena_inicial_4.gd" id="1_exncl"]
+[ext_resource type="Texture2D" uid="uid://bhi8b4hyrd8hb" path="res://assets/foto/imagensCenas/cena3 (1).jpg" id="2_ijgac"]
+[ext_resource type="Texture2D" uid="uid://d1gdctjv45hrp" path="res://assets/foto/imagensCenas/file.png" id="3_p60n4"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_htd8f"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_eomep"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_1hg6j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4nwj"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuofy"]
+texture = ExtResource("5_eomep")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b70le"]
+texture = ExtResource("5_eomep")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqv8a"]
+texture = ExtResource("5_eomep")
+
+[node name="CenaInicial4" type="Node2D"]
+script = ExtResource("1_exncl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ijgac")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_p60n4")
+
+[node name="texto" type="RichTextLabel" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 124.0
+offset_right = -76.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_htd8f")
+theme_override_font_sizes/normal_font_size = 25
+text = "Segundo a profecia ancestral da tribo, ao completar sua décima quinta primavera, Tainá traria equilíbrio ao mundo devastado pelos desastres ambientais. Sua chegada ao poder seria marcada por uma rara Lua de Sangue."
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = 5.0
+offset_right = 1.0
+offset_bottom = 84.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_htd8f")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_n4nwj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iuofy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b70le")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqv8a")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_1hg6j")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

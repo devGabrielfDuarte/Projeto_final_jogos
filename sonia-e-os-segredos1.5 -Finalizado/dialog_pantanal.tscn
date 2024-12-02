@@ -1,0 +1,164 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfp7jkbty4rui"]
+
+[ext_resource type="Script" path="res://Scripts/dialog_pantanal.gd" id="1_568or"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="1_em3pl"]
+[ext_resource type="Texture2D" uid="uid://bs2bp4yyvylgs" path="res://assets/foto/imagensDialog/pantanal_pixel_art_resized_1080x210.png" id="2_n07ex"]
+[ext_resource type="Texture2D" uid="uid://bpbsin8nwpy2d" path="res://assets/foto/imagensDialog/boitata.png" id="3_ubwic"]
+[ext_resource type="StyleBox" uid="uid://dtuwoxk4a2vkx" path="res://assets/styles/botao_normal.tres" id="5_6gcxt"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/tecladoefeito.mp3" id="6_xwli0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1wp2"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ks8t"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 16
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqq3d"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 27
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="dialog_pantanal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_568or")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -211.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_n07ex")
+
+[node name="photo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -304.0
+offset_right = 167.0
+offset_bottom = -119.0
+grow_vertical = 0
+texture = ExtResource("3_ubwic")
+
+[node name="color_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 203.0
+offset_top = -169.0
+offset_right = -131.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.376471, 0.25098, 0.101961, 0.462745)
+
+[node name="nome" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023
+anchor_top = 0.835
+anchor_right = 0.164
+anchor_bottom = 0.964
+offset_left = -10.496
+offset_top = -9.97504
+offset_right = -9.87601
+offset_bottom = -9.82703
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("1_em3pl")
+theme_override_font_sizes/font_size = 30
+text = "Boitata"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Pista" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -359.0
+offset_top = -163.0
+offset_right = 436.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/normal_font = ExtResource("1_em3pl")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "Pista"
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -175.0
+offset_right = -18.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 20
+theme_override_fonts/font = ExtResource("1_em3pl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_q1wp2")
+theme_override_styles/hover = ExtResource("5_6gcxt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7ks8t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_oqq3d")
+text = "OK"
+autowrap_mode = 2
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xwli0")
+volume_db = 2.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

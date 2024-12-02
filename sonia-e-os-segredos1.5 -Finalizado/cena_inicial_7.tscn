@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://85l6737rd175"]
+
+[ext_resource type="Script" path="res://cena_inicial_7.gd" id="1_2bwl4"]
+[ext_resource type="Texture2D" uid="uid://btuhe5vwyh3qm" path="res://assets/foto/imagensSprites/gemascena (1).jpg" id="2_anmll"]
+[ext_resource type="Texture2D" uid="uid://d1gdctjv45hrp" path="res://assets/foto/imagensCenas/file.png" id="3_uxpfr"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_58irf"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_ecme1"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_4l2nl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eff14"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g15x1"]
+texture = ExtResource("5_ecme1")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1m1v"]
+texture = ExtResource("5_ecme1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhoyg"]
+texture = ExtResource("5_ecme1")
+
+[node name="CenaInicial7" type="Node2D"]
+script = ExtResource("1_2bwl4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_anmll")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_uxpfr")
+
+[node name="texto" type="RichTextLabel" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 124.0
+offset_right = -76.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_58irf")
+theme_override_font_sizes/normal_font_size = 25
+text = "Mas há esperança: as cinco Gemas Elementares — que representam Fogo, Água, Terra, Ar e Espírito — são a chave para derrotar a Cuca. Juntas, elas concedem o poder necessário para enfrentar a bruxa em seu covil. No entanto, estão espalhadas pela floresta, escondidas em lugares de grande perigo e protegidas por desafios antigos.\""
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = 10.0
+offset_right = 1.0
+offset_bottom = 89.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_58irf")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_eff14")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g15x1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t1m1v")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yhoyg")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_4l2nl")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

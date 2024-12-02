@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://bi8n0kcqkiqeq"]
+
+[ext_resource type="Script" path="res://Scripts/cena_inicial.gd" id="1_7oof8"]
+[ext_resource type="Texture2D" uid="uid://dp73llqi5o4ko" path="res://assets/foto/imagensDialog/resized_cena1_updated (1).jpeg" id="2_cbini"]
+[ext_resource type="Texture2D" uid="uid://d1gdctjv45hrp" path="res://assets/foto/imagensCenas/file.png" id="3_gjan4"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_8k78y"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_mwhh8"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_tbcoa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0jww"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1ce5"]
+texture = ExtResource("5_mwhh8")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_en3n2"]
+texture = ExtResource("5_mwhh8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_se074"]
+texture = ExtResource("5_mwhh8")
+
+[node name="CenaInicial" type="Node2D"]
+script = ExtResource("1_7oof8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 56.0
+offset_right = -65.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cbini")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_gjan4")
+
+[node name="texto" type="RichTextLabel" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = 124.0
+offset_right = -76.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_8k78y")
+theme_override_font_sizes/normal_font_size = 25
+text = "No coração pulsante da Amazônia, havia uma tribo próspera e feliz, guardiã de um segredo que conectava o destino da humanidade e da natureza. "
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = 36.0
+offset_right = 3.0
+offset_bottom = 115.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_8k78y")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_b0jww")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f1ce5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_en3n2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_se074")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_tbcoa")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

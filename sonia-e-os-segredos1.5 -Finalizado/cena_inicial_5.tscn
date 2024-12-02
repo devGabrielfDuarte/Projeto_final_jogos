@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6p4s8bxeg7n5"]
+
+[ext_resource type="Script" path="res://cena_inicial_5.gd" id="1_40gsd"]
+[ext_resource type="Texture2D" uid="uid://cs2y7eamrt2s8" path="res://assets/foto/imagensCenas/cucacena5.jpg" id="2_qs2k1"]
+[ext_resource type="Texture2D" uid="uid://d1gdctjv45hrp" path="res://assets/foto/imagensCenas/file.png" id="3_jkkmb"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_orind"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_ywyik"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/sound/tecladoefeito.mp3" id="6_mj5lk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxm0n"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2if8t"]
+texture = ExtResource("5_ywyik")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frh4e"]
+texture = ExtResource("5_ywyik")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgos7"]
+texture = ExtResource("5_ywyik")
+
+[node name="CenaInicial5" type="Node2D"]
+script = ExtResource("1_40gsd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qs2k1")
+
+[node name="Texto" type="Control" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -679.0
+offset_right = -67.0
+offset_bottom = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -626.0
+offset_top = -65.0
+offset_right = -626.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_jkkmb")
+
+[node name="texto" type="RichTextLabel" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -560.0
+offset_top = 59.0
+offset_right = -697.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_orind")
+theme_override_font_sizes/normal_font_size = 25
+text = "Mas nem todos desejavam esse equilíbrio. Nas sombras da floresta, a Cuca, uma bruxa astuta e cruel, soube do poder de Tainá. Movida pela ambição de dominar as forças da natureza, ela tramou um plano terrível."
+scroll_following = true
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Texto"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = 7.0
+offset_right = 1.0
+offset_bottom = 86.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_orind")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_bxm0n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2if8t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_frh4e")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fgos7")
+text = "Proximo
+"
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="CanvasLayer/Control/Texto"]
+stream = ExtResource("6_mj5lk")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Texto/Button" to="." method="_on_button_pressed"]

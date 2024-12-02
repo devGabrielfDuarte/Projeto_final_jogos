@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://8v0bxq487xfe"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_wdrjo"]
+[ext_resource type="Texture2D" uid="uid://dukv5023xwqc7" path="res://assets/foto/imagensCenas/Sonia_Cuca_Cave_PixelArt (1).png" id="2_o003s"]
+[ext_resource type="Texture2D" uid="uid://crmppq27vmyhe" path="res://assets/foto/imagensCenas/file (4) (1).png" id="3_fojnt"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_fg6k6"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_1d11v"]
+[ext_resource type="AudioStream" uid="uid://bv7y7a2w2x36e" path="res://assets/videogame-death-sound-43894.mp3" id="6_2t2ds"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ladhn"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wpv3"]
+texture = ExtResource("5_1d11v")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pht3l"]
+texture = ExtResource("5_1d11v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aopos"]
+texture = ExtResource("5_1d11v")
+
+[node name="gameOver" type="Node2D"]
+script = ExtResource("1_wdrjo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 46.0
+offset_right = -60.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o003s")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 28.0
+offset_right = 570.0
+offset_bottom = 240.0
+texture = ExtResource("3_fojnt")
+
+[node name="ButtonGameOver" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.0
+offset_top = -142.0
+offset_right = -62.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_fg6k6")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_ladhn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2wpv3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pht3l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_aopos")
+text = "Jogar 
+Novamente
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("6_2t2ds")
+
+[connection signal="pressed" from="CanvasLayer/Control/ButtonGameOver" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ButtonGameOver" to="." method="_on_button_game_over_pressed"]

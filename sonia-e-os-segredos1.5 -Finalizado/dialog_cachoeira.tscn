@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://dq2ax7ge23neg"]
+
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="1_pl0mt"]
+[ext_resource type="Script" path="res://Scripts/dialog_cachoeira.gd" id="1_tvuwy"]
+[ext_resource type="Texture2D" uid="uid://r0ikb8idttpx" path="res://assets/foto/imagensDialog/cachoeira_redimensionada.jpg" id="2_oohmq"]
+[ext_resource type="Texture2D" uid="uid://bhw6ujen5e7yy" path="res://assets/foto/imagensDialog/iara.jpg" id="3_sivog"]
+[ext_resource type="AudioStream" uid="uid://dya5l4uyl4vyp" path="res://assets/tecladoefeito.mp3" id="5_pwmwq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5edxl"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t87m2"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 27
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5c24"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 16
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb328"]
+bg_color = Color(0.576471, 0.466667, 0.168627, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 27
+border_color = Color(0.469073, 0.377493, 0.128228, 0.980392)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="dialog_cachoeira" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tvuwy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -212.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_oohmq")
+
+[node name="photo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = -294.0
+offset_right = 176.0
+offset_bottom = -109.0
+grow_vertical = 0
+texture = ExtResource("3_sivog")
+
+[node name="color_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 206.0
+offset_top = -169.0
+offset_right = -128.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.270588, 0.654902, 0.952941, 0.627451)
+
+[node name="nome" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.023
+anchor_top = 0.835
+anchor_right = 0.164
+anchor_bottom = 0.964
+offset_left = -10.496
+offset_top = -9.97504
+offset_right = -9.87601
+offset_bottom = -9.82703
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_pl0mt")
+theme_override_font_sizes/font_size = 30
+text = "Iara"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Pista" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -359.0
+offset_top = -161.0
+offset_right = 437.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/normal_font = ExtResource("1_pl0mt")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+scroll_following = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -107.0
+offset_top = -169.0
+offset_right = -12.0
+offset_bottom = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 20
+theme_override_fonts/font = ExtResource("1_pl0mt")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_5edxl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t87m2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5c24")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bb328")
+text = "OK"
+autowrap_mode = 2
+
+[node name="Digitacao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pwmwq")
+volume_db = 2.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

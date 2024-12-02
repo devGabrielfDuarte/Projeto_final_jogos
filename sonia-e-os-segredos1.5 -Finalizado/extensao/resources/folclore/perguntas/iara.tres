@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://bjmqp6p8b7a5t"]
+
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_2bxef"]
+[ext_resource type="Texture2D" uid="uid://bhxgo4xq65n51" path="res://extensao/resources/folclore/fotor-2024120122289.jpg" id="1_6hwbf"]
+
+[resource]
+script = ExtResource("1_2bxef")
+question_info = "Qual é o papel principal da Iara no folclore brasileiro?"
+type = 1
+question_image = ExtResource("1_6hwbf")
+options = Array[String](["Roubar colheitas durante a noite", "Proteger a floresta das queimadas", "Encantar homens para levá-los para o fundo do rio", "Vigiar as aldeias indígenas"])
+correct = "Encantar homens para levá-los para o fundo do rio"

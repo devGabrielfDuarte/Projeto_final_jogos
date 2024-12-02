@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d26ht7pxy2d1w"
+path="res://.godot/imported/Música Relaxante_ Flauta Indígena e Sons da Natureza - Acalmar a Mente e Relaxar_fQvwNbj1hiI_[cut_1334sec].ogg-2165369c20009969de98386bcaa44cbc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Música Relaxante_ Flauta Indígena e Sons da Natureza - Acalmar a Mente e Relaxar_fQvwNbj1hiI_[cut_1334sec].ogg"
+dest_files=["res://.godot/imported/Música Relaxante_ Flauta Indígena e Sons da Natureza - Acalmar a Mente e Relaxar_fQvwNbj1hiI_[cut_1334sec].ogg-2165369c20009969de98386bcaa44cbc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

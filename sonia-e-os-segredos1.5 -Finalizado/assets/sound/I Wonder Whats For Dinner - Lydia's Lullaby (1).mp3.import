@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnq5v8id0t5yb"
+path="res://.godot/imported/I Wonder Whats For Dinner - Lydia's Lullaby (1).mp3-30553b9c962ea52c20118db45d8e08a9.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/I Wonder Whats For Dinner - Lydia's Lullaby (1).mp3"
+dest_files=["res://.godot/imported/I Wonder Whats For Dinner - Lydia's Lullaby (1).mp3-30553b9c962ea52c20118db45d8e08a9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

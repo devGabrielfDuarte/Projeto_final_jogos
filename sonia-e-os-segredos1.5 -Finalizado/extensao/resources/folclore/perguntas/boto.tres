@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://c6mffs6kl53yp"]
+
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_7t2w7"]
+[ext_resource type="Texture2D" uid="uid://bhxgo4xq65n51" path="res://extensao/resources/folclore/fotor-2024120122289.jpg" id="1_kf7a1"]
+
+[resource]
+script = ExtResource("1_7t2w7")
+question_info = "Qual é a criatura do folclore brasileiro que vive no fundo dos rios e se transforma em um homem bonito para seduzir mulheres?"
+type = 1
+question_image = ExtResource("1_kf7a1")
+options = Array[String](["Lobisomem", "Iara", "Boto", "Boitatá"])
+correct = "Boto"

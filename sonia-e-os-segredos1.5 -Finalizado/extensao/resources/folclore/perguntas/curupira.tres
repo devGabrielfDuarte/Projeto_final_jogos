@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://xm8ck840dx6h"]
+
+[ext_resource type="Texture2D" uid="uid://bhxgo4xq65n51" path="res://extensao/resources/folclore/fotor-2024120122289.jpg" id="1_hgpay"]
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_kysqh"]
+
+[resource]
+script = ExtResource("1_kysqh")
+question_info = "O que o Curupira, personagem do folclore brasileiro, faz para proteger a floresta?"
+type = 1
+question_image = ExtResource("1_hgpay")
+options = Array[String](["Planta árvores mágicas", "Assusta e confunde caçadores com seus pés virados para trás", "Enfeitiça animais para atacar invasores", "Espalha fogo nas clareiras"])
+correct = "Assusta e confunde caçadores com seus pés virados para trás"

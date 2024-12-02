@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=11 format=3 uid="uid://1m0px6ttka7i"]
+
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/theme.gd" id="1_wv3v5"]
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="2_oktto"]
+[ext_resource type="Resource" uid="uid://uf5ufbmbb660" path="res://extensao/resources/folclore/perguntas/boitata.tres" id="3_x0edv"]
+[ext_resource type="Resource" uid="uid://c6mffs6kl53yp" path="res://extensao/resources/folclore/perguntas/boto.tres" id="4_t6bln"]
+[ext_resource type="Resource" uid="uid://bpbs65tqaxt7l" path="res://extensao/resources/folclore/perguntas/cobra_de_fogo.tres" id="5_biero"]
+[ext_resource type="Resource" uid="uid://xm8ck840dx6h" path="res://extensao/resources/folclore/perguntas/curupira.tres" id="6_wet62"]
+[ext_resource type="Resource" uid="uid://bjmqp6p8b7a5t" path="res://extensao/resources/folclore/perguntas/iara.tres" id="7_g1c11"]
+[ext_resource type="Resource" uid="uid://ba208a7vuglaa" path="res://extensao/resources/folclore/perguntas/iara_faz.tres" id="8_vty6b"]
+[ext_resource type="Resource" uid="uid://84kqffbek3f7" path="res://extensao/resources/folclore/perguntas/protetor_da_floresta.tres" id="9_404it"]
+[ext_resource type="Resource" uid="uid://btu7qwjhtq2rd" path="res://extensao/resources/folclore/perguntas/saci_perg.tres" id="10_htejg"]
+
+[resource]
+script = ExtResource("1_wv3v5")
+theme = Array[ExtResource("2_oktto")]([ExtResource("3_x0edv"), ExtResource("4_t6bln"), ExtResource("5_biero"), ExtResource("6_wet62"), ExtResource("7_g1c11"), ExtResource("8_vty6b"), ExtResource("9_404it"), ExtResource("10_htejg")])

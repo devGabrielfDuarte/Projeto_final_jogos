@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://ba208a7vuglaa"]
+
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_f11wa"]
+[ext_resource type="Texture2D" uid="uid://bhxgo4xq65n51" path="res://extensao/resources/folclore/fotor-2024120122289.jpg" id="1_r7gd8"]
+
+[resource]
+script = ExtResource("1_f11wa")
+question_info = "O que a Iara faz para encantar as pessoas?"
+type = 1
+question_image = ExtResource("1_r7gd8")
+options = Array[String]([" Dança", "Canta", "Usa uma varinha", "Grita"])
+correct = "Canta"

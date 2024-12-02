@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=3 format=3 uid="uid://btu7qwjhtq2rd"]
+
+[ext_resource type="Texture2D" uid="uid://b15ulhf4wnc4w" path="res://extensao/assets/sprits/luxa.org-pixelate-177e15ab-0f0b-442f-a7a1-6147c65421d5_2.jpeg" id="1_qmst6"]
+[ext_resource type="Script" path="res://extensao/Scripts/Resources/question.gd" id="1_ubyj3"]
+
+[resource]
+script = ExtResource("1_ubyj3")
+question_info = "Quem é o personagem do folclore brasileiro conhecido por usar um gorro vermelho e pregar peças nas pessoas?"
+type = 1
+question_image = ExtResource("1_qmst6")
+options = Array[String](["Boto", "Saci-Pererê", "Curupira", "Caipora"])
+correct = "Saci-Pererê"

@@ -1,0 +1,124 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkeg6ra2cwlal"]
+
+[ext_resource type="Script" path="res://ultima_cena.gd" id="1_d3nn8"]
+[ext_resource type="Texture2D" uid="uid://c4tb4kmwpcndx" path="res://assets/foto/imagensCenas/florestafinal (1).jpg" id="2_sep02"]
+[ext_resource type="Texture2D" uid="uid://cxtw1vh7iri87" path="res://assets/foto/imagensCenas/file (2) (1).png" id="3_18ook"]
+[ext_resource type="FontFile" uid="uid://7hk4yohut66b" path="res://assets/foto/Minecraft.ttf" id="4_tp48l"]
+[ext_resource type="Texture2D" uid="uid://beths2vx8gfbi" path="res://assets/foto/imagensCenas/DALL·E-2024-12-01-11.06 (1).png" id="5_vj5t6"]
+[ext_resource type="AudioStream" uid="uid://bgx0vpbbj3ph0" path="res://assets/sound/'Omega' by @ScottBuckley  🇦🇺 _ Epic Progressive Music (No Copyright) ⛰️.mp3" id="6_ysauv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j70vo"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xiylf"]
+texture = ExtResource("5_vj5t6")
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hkpq"]
+texture = ExtResource("5_vj5t6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0utf5"]
+texture = ExtResource("5_vj5t6")
+
+[node name="UltimaCena" type="Node2D"]
+script = ExtResource("1_d3nn8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[node name="ImagemCutscene" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = -65.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sep02")
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -203.0
+offset_top = 83.0
+offset_right = 199.0
+offset_bottom = 328.0
+grow_horizontal = 2
+color = Color(0.000359336, 0.00157002, 0.00165957, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_top = 102.0
+offset_right = 185.0
+offset_bottom = 298.0
+grow_horizontal = 2
+color = Color(0.0405, 0.044325, 0.27, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -185.0
+offset_top = 95.0
+offset_right = 188.0
+offset_bottom = 308.0
+grow_horizontal = 2
+texture = ExtResource("3_18ook")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -264.0
+offset_top = -194.0
+offset_right = -67.0
+offset_bottom = -101.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_tp48l")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxFlat_j70vo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xiylf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2hkpq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0utf5")
+text = "Jogar
+Novamente"
+
+[node name="Audio" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource("6_ysauv")
+volume_db = 2.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="." method="_on_button_pressed"]
